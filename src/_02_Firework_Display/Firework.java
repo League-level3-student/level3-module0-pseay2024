@@ -21,14 +21,14 @@ public class Firework{
 	
 	public Firework() {
 		//2. Initialize the Spark array to contain 100 Sparks. 
-		sparks = new Spark[100];
+		int sparkLength = 100;
+		sparks = new Spark[sparkLength];
 		
 		//3. Iterate through the sparks and initialize each one to a new Spark.
 		//   Make each spark start at the middle bottom of the screen.
-		for (Spark s : sparks)
+		for (int i = 0; i < sparkLength; i++)
 		{
-			s.x = Toolkit.getDefaultToolkit().getScreenSize().width/2;
-			s.y = Toolkit.getDefaultToolkit().getScreenSize().height - 5;
+			sparks[i] = new Spark(FireworkDisplay.WIDTH/2, FireworkDisplay.HEIGHT);
 		}
 	}
 	
